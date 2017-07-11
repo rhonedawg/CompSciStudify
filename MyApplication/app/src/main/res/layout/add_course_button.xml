@@ -1,0 +1,27 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal">
+
+    <TextView
+        android:id="@+id/telephone"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:padding="5dp"
+        android:drawableLeft="@android:drawable/ic_input_add"
+        android:text="CS Courses" />
+
+    <!--android:background="@drawable/border"-->
+
+    <!-- Add view here with some width for spacing -->
+
+    <TextView
+        android:id="@+id/grey_text"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content" />
+
+
+
+</LinearLayout>

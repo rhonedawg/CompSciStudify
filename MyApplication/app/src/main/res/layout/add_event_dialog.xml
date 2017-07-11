@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="5dp">
+
+    <TextView
+        android:text="Event Info"
+        android:layout_gravity="center"
+        android:textStyle="bold"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="25sp"
+        android:id="@+id/task_info"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="16dp" />
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:inputType="textPersonName"
+        android:hint="Event Name"
+        android:ems="10"
+        android:layout_marginTop="71dp"
+        android:id="@+id/event_name_edit"
+        android:layout_below="@+id/task_info"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:inputType="textMultiLine"
+        android:hint="@string/description"
+        android:ems="10"
+        android:id="@+id/event_desc_edit"
+        android:layout_below="@+id/event_name_edit"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+
+
+
+    <!--
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="18dp"
+            android:inputType="date"
+            android:onClick="showDatePickerDialog"
+            android:ems="10"
+            android:id="@+id/datePicker2"
+            android:hint="Date"
+            android:layout_below="@+id/desc_nameID"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_marginLeft="11dp"
+            android:layout_marginStart="11dp"
+            style="@style/Hyperlink"/>-->
+
+
+    <Button
+        android:text="select date"
+        android:onClick="showDatePickerDialog"
+        android:id="@+id/datePicker"
+        android:layout_below="@+id/event_desc_edit"
+        android:layout_toRightOf="@+id/task_info"
+        android:layout_toEndOf="@+id/task_info"
+        android:textColor="#FFFFFF"
+        android:textSize="15sp"
+        android:layout_width="130dp"
+        android:layout_height="50dp"
+        android:background="@drawable/buttonshape2"/>
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:id="@+id/date_text"
+        android:focusableInTouchMode="true"
+        android:layout_marginRight="11dp"
+        android:layout_marginEnd="11dp"
+        android:layout_alignBaseline="@+id/datePicker"
+        android:layout_alignBottom="@+id/datePicker"
+        android:layout_toLeftOf="@+id/datePicker"
+        android:layout_toStartOf="@+id/datePicker"
+        android:hint="Date" />
+
+
+    <Button
+        android:text="end time"
+        android:layout_marginTop="10dp"
+        android:id="@+id/endTimeButton"
+        android:layout_below="@+id/startTimeEdit"
+        android:layout_alignLeft="@+id/startTimeButton"
+        android:layout_alignStart="@+id/startTimeButton"
+        android:textColor="#FFFFFF"
+        android:textSize="15sp"
+        android:layout_width="130dp"
+        android:layout_height="50dp"
+        android:background="@drawable/buttonshape2"/>
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="textPersonName"
+        android:ems="10"
+        android:id="@+id/startTimeEdit"
+        android:hint="Start Time"
+        android:layout_alignBaseline="@+id/startTimeButton"
+        android:layout_alignBottom="@+id/startTimeButton"
+        android:layout_alignLeft="@+id/date_text"
+        android:layout_alignStart="@+id/date_text" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="textPersonName"
+        android:ems="10"
+        android:id="@+id/endTimeEdit"
+        android:hint="End Time"
+        android:layout_alignBottom="@+id/endTimeButton"
+        android:layout_alignLeft="@+id/startTimeEdit"
+        android:layout_alignStart="@+id/startTimeEdit" />
+
+    <Button
+
+        android:text="start time"
+        android:onClick="showTimePickerDialog"
+        android:id="@+id/startTimeButton"
+        android:layout_below="@+id/datePicker"
+        android:layout_alignLeft="@+id/datePicker"
+        android:layout_alignStart="@+id/datePicker"
+        android:layout_marginTop="5dp"
+        android:textColor="#FFFFFF"
+        android:textSize="15sp"
+        android:layout_width="130dp"
+        android:layout_height="50dp"
+        android:background="@drawable/buttonshape2"/>
+
+    <Button
+        android:text="OK"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/submitButton"
+        android:layout_marginLeft="35dp"
+        android:layout_marginStart="35dp"
+        android:layout_alignBaseline="@+id/cancel_button"
+        android:layout_alignBottom="@+id/cancel_button"
+        android:layout_toRightOf="@+id/cancel_button"
+        android:layout_toEndOf="@+id/cancel_button" />
+
+    <Button
+        android:text="Cancel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/cancel_button"
+        android:layout_marginTop="31dp"
+        android:layout_marginLeft="61dp"
+        android:layout_marginStart="61dp"
+        android:layout_below="@+id/endTimeEdit"
+        android:layout_alignLeft="@+id/endTimeEdit"
+        android:layout_alignStart="@+id/endTimeEdit" />
+</RelativeLayout>
